@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /siteadmin
+Sitemap: http://viersiebenacht.de/sitemap.xml
