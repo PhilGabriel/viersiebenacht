@@ -6,11 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const introText = document.getElementById("introText");
   const backgroundButton = document.querySelector('a[href="/hintergrund.html"]'); // Button zur Hintergrundseite
 
+  // Start-Button mit Pulse-Effekt
+  startButton.classList.add("pulse");
+
   startButton.addEventListener("click", function () {
     startButton.disabled = true;
     instructions.style.display = "none";
     introText.style.display = "none";
     backgroundButton.style.display = "none"; // Versteckt den Hintergrund-Button
+
+    // Vibration bei Start der Übung
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+
     startCountdown(3, function () {
       beginBreathingExercise();
     });
