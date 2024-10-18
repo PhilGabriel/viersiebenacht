@@ -56,3 +56,19 @@ h1 {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 1.1rem;
 }
+.pulse {
+    animation: pulse-animation 1.5s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
